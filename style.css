@@ -2,111 +2,236 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "gilroy";
 }
 
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
 }
 
-main {
-  margin: 1rem 2rem 1rem 2rem;
+#main {
+  height: 100%;
+  width: 100%;
+  padding-top: 0.5px;
+  background-color: #f8f8f8;
 }
-main #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main #navbar h1 {
-  font-size: 1.5rem;
-}
-main #navbar .midnav {
-  display: none;
-}
-main #navbar .search {
+
+#navbar {
+  margin-top: 20px;
+  height: 10%;
+  width: 100%;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main #navbar .search button {
-  background-color: black;
+
+#navbar h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid black;
+  height: 100%;
+  width: 22%;
+  font-size: 20px;
+}
+
+#navbar h3:nth-last-child(2) {
+  width: 28%;
+}
+
+#navbar h3:nth-last-child(1) {
+  border-right: none;
+  width: 10%;
+}
+
+#navbar h1 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+  width: 18%;
+  font-size: 45px;
+}
+
+#center {
+  height: 90%;
+  width: 100%;
+  padding: 4vw;
+  position: relative;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#content video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#overlay {
+  padding-left: 5vh;
+  padding-bottom: 5vh;
+  position: absolute;
+  height: 40%;
+  width: 90%;
+  bottom: 0;
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  margin: 0 1rem;
 }
-main #navbar .search i {
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+
+#overlay h1 {
+  padding-bottom: 3vh;
 }
-main #navbar .search i:hover {
-  transform: scale(1.1);
+
+#line {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
 }
-main #navbar .search .anav {
-  display: none;
+
+#overlay h4 {
+  padding-top: 3vh;
 }
-main #main-section {
+
+#scroll {
+  height: 40%;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 2vw;
+  animation-name: anime;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#container img {
+  border-radius: 50%;
+  height: 92%;
+  width: 14%;
+  margin: 1.4vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 30% 30%;
+     object-position: 30% 30%;
+}
+
+#container img:hover {
+  border: 4px solid black;
+}
+
+@keyframes anime {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#alphabate {
+  height: 10vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
-main #main-section .left-main-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
+
+#alphabate h5 {
+  font-size: 1.7vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: italic;
+  border-bottom: 2px solid black;
 }
-main #main-section .left-main-div h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+
+#alphabate h6 {
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: italic;
+  border-radius: 50%;
+  padding: 0.6vw 0.8vw;
 }
-main #main-section .left-main-div p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+
+#alphabate h6:hover {
+  border: 1px solid black;
 }
-main #main-section .left-main-div .left-main-div-button {
-  display: none;
-  background-color: red;
+
+#page2 {
+  height: 100%;
+  width: 100%;
 }
-main #main-section .right-main-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+@media (max-width: 1024px) {
+  #navbar h1 {
+    font-size: 35px;
+    width: 25%;
+  }
+  #navbar h3 {
+    font-size: 18px;
+  }
+  #navbar h3:nth-last-child(2) {
+    width: 26%;
+  }
+  #navbar h3:nth-last-child(1) {
+    width: 14%;
+  }
 }
-main #main-section .right-main-div .right-main-image-div {
-  background-image: url(pngkey.com-mapamundi-png-2740178.png);
-  background-size: cover;
-  align-items: center;
-  background-position: center;
-  gap: 1rem;
-  display: grid;
-  grid-template-areas: "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img3 img3" "img1 img1 img3 img3";
+@media (max-width: 768px) {
+  #navbar {
+    display: none;
+  }
+  .donthide {
+    display: block;
+  }
+  .donthide h1 {
+    font-size: 30px;
+    background: red;
+  }
+  #center {
+    padding: 2vw;
+  }
+  #container img {
+    width: 40%;
+    height: auto;
+    margin: 5%;
+  }
+  #alphabate h5 {
+    font-size: 3vw;
+  }
+  #alphabate h6 {
+    font-size: 3vw;
+  }
 }
-main #main-section .right-main-div .right-main-image-div .rim1 {
-  grid-area: img1;
-  width: 11rem;
-  aspect-ratio: 9/16.2;
-}
-main #main-section .right-main-div .right-main-image-div .rim2 {
-  grid-area: img2;
-  width: 11rem;
-  aspect-ratio: 1/1;
-}
-main #main-section .right-main-div .right-main-image-div .rim3 {
-  grid-area: img3;
-  width: 11rem;
-  aspect-ratio: 4/3;
-}
-main #main-section .right-main-div button {
-  background-color: black;
-  color: white;
-  margin-top: 2rem;
-  border: none;
-  border-radius: 20px;
-  padding: 1rem 2rem;
+@media (max-width: 480px) {
+  #center {
+    padding: 1vw;
+  }
+  #container img {
+    width: 45%;
+    height: auto;
+  }
+  #alphabate h5 {
+    font-size: 4vw;
+  }
+  #alphabate h6 {
+    font-size: 4vw;
+  }
 }/*# sourceMappingURL=style.css.map */
