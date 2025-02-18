@@ -2,9 +2,111 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "gilroy";
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+}
+
+main {
+  margin: 1rem 2rem 1rem 2rem;
+}
+main #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #navbar h1 {
+  font-size: 1.5rem;
+}
+main #navbar .midnav {
+  display: none;
+}
+main #navbar .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main #navbar .search button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0 1rem;
+}
+main #navbar .search i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+main #navbar .search i:hover {
+  transform: scale(1.1);
+}
+main #navbar .search .anav {
+  display: none;
+}
+main #main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main #main-section .left-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+main #main-section .left-main-div h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+main #main-section .left-main-div p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+main #main-section .left-main-div .left-main-div-button {
+  display: none;
+  background-color: red;
+}
+main #main-section .right-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #main-section .right-main-div .right-main-image-div {
+  background-image: url(pngkey.com-mapamundi-png-2740178.png);
+  background-size: cover;
+  align-items: center;
+  background-position: center;
+  gap: 1rem;
+  display: grid;
+  grid-template-areas: "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img3 img3" "img1 img1 img3 img3";
+}
+main #main-section .right-main-div .right-main-image-div .rim1 {
+  grid-area: img1;
+  width: 11rem;
+  aspect-ratio: 9/16.2;
+}
+main #main-section .right-main-div .right-main-image-div .rim2 {
+  grid-area: img2;
+  width: 11rem;
+  aspect-ratio: 1/1;
+}
+main #main-section .right-main-div .right-main-image-div .rim3 {
+  grid-area: img3;
+  width: 11rem;
+  aspect-ratio: 4/3;
+}
+main #main-section .right-main-div button {
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
 }/*# sourceMappingURL=style.css.map */
