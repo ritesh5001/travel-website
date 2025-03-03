@@ -66,18 +66,19 @@ main {
             
         }
 
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        
         left: 0;
         background-image: url(pngkey.com-mapamundi-png-2740178.png);
         background-size: cover;
         background-position: right;
 
         .left-main-div {
+            margin-left: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -106,7 +107,7 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 2rem;
+            margin-right: 2rem;
 
             .right-main-image-div {
                 display: grid;
