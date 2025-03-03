@@ -80,6 +80,9 @@ main #main1-section .left-main-div h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+main #main1-section .left-main-div h2 span {
+  background-color: transparent;
+}
 @media (min-width: 1080px) {
   main #main1-section .left-main-div h2 {
     font-size: 4rem;
@@ -189,7 +192,6 @@ main .main2-section h2 {
 }
 main .main2-section .placess {
   display: none;
-  display: flex;
   align-items: center;
   gap: 2rem;
 }
@@ -294,9 +296,12 @@ main .main3-section {
 }
 @media (min-width: 1080px) {
   main .main3-section {
-    display: grid;
-    grid-template-areas: "left-3section, right-3section" "left-3section, right-3section";
+    flex-direction: row;
+    gap: 2rem;
   }
+}
+main .main3-section .left-3section {
+  margin-top: 2rem;
 }
 main .main3-section .left-3section img {
   margin: 2rem 0 auto;
@@ -485,14 +490,25 @@ main .main-foot {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 1080px) {
+  main .main-foot {
+    height: 50vh;
+  }
+}
 main .main-foot h2 {
   font-size: 2rem;
   width: 70vw;
   text-align: center;
   background-color: rgb(106, 106, 106);
 }
+@media (min-width: 1080px) {
+  main .main-foot h2 {
+    margin-top: 3rem;
+  }
+}
 main .main-foot .search {
   background-color: rgb(106, 106, 106);
+  margin: 0 2rem;
 }
 main .main-foot .search button {
   background-color: black;
@@ -511,13 +527,14 @@ main .main-foot .search input {
   border: none;
   border-radius: 20px;
   padding: 1rem 2rem;
-  width: 300px;
+  width: 60%;
   background-color: rgba(255, 255, 255, 0.5);
 }
 main .main-foot p {
   color: white;
   font-size: 1rem;
   background-color: rgb(106, 106, 106);
+  margin: 0 2rem;
 }
 main .main-foot p a {
   background-color: rgb(106, 106, 106);

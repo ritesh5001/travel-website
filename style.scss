@@ -91,6 +91,10 @@ main {
 
             h2 {
 
+                span{
+                    background-color: transparent;
+                }
+                
                 @media (min-width:1080px) {
                     font-size: 4rem;
                     span{
@@ -228,7 +232,7 @@ main {
         }
         .placess{
             display: none;
-            display: flex;
+            // display: flex;
             align-items: center;
             // margin: 2rem;
             gap: 2rem;
@@ -347,14 +351,12 @@ main {
         align-items: center;
 
         @media(min-width:1080px){
-            display: grid;
-            
-            grid-template-areas:
-            "left-3section, right-3section"
-            "left-3section, right-3section";
+            flex-direction: row;
+            gap: 2rem;
         }
 
         .left-3section{
+            margin-top: 2rem;
             img{
                 margin: 2rem 0 auto;
                 width: 100%;
@@ -559,7 +561,17 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media (min-width:1080px){
+            height: 50vh;
+        }
+
         h2{
+
+            @media (min-width:1080px){
+                margin-top: 3rem;
+            }
+
             font-size: 2rem;
             width: 70vw;
             text-align: center;
@@ -567,6 +579,7 @@ main {
         }
         .search{
             background-color: rgb(106, 106, 106);
+            margin: 0 2rem;
 
             button{
                 background-color: black;
@@ -585,7 +598,7 @@ main {
                 border: none;
                 border-radius: 20px;
                 padding: 1rem 2rem;
-                width: 300px;
+                width: 60%;
                 background-color: rgba(255, 255, 255, 0.5);
             }
         }
@@ -593,10 +606,12 @@ main {
             color: white;
             font-size: 1rem;
             background-color: rgb(106, 106, 106);
+            margin: 0 2rem;
             a{
                 background-color: rgb(106, 106, 106);
                 color: white;
                 text-decoration: none;
+                // font-size: automatic;
                 transition: all 0.3s ease-in-out;
                 &:hover {
                     color: red;
