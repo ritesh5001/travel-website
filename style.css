@@ -56,7 +56,6 @@ main #main1-section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   left: 0;
   background-image: url(pngkey.com-mapamundi-png-2740178.png);
   background-size: cover;
@@ -183,8 +182,46 @@ main .main2-section {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+main .main2-section h2 {
+  font-size: 3rem;
+}
+main .main2-section .placess {
+  display: none;
+  display: flex;
   align-items: center;
   gap: 2rem;
+}
+@media (min-width: 1080px) {
+  main .main2-section .placess {
+    display: block;
+    display: flex;
+  }
+}
+main .main2-section .placess .more:hover .more-destinations {
+  display: block;
+}
+main .main2-section .placess .more-destinations {
+  display: none;
+}
+main .main2-section .placess button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  align-items: center;
+  display: flex;
+}
+main .main2-section .placess button:hover {
+  background-color: red;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+main .main2-section .placess button i {
+  background-color: transparent;
+  margin-left: 0.5rem;
 }
 main .main2-section .scroll {
   display: flex;
@@ -214,6 +251,11 @@ main .main2-section .scroll-section .destination img {
   aspect-ratio: 1/1;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 1080px) {
+  main .main2-section .scroll-section .destination img {
+    aspect-ratio: 3/4;
+  }
+}
 main .main2-section .scroll-section .destination img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
@@ -224,7 +266,6 @@ main .main2-section .scroll-section .destination h3 {
 main .main2-section .Explore-all-destination-btn {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
 }
 main .main2-section .Explore-all-destination-btn button {
   background-color: black;
@@ -234,6 +275,11 @@ main .main2-section .Explore-all-destination-btn button {
   padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+@media (min-width: 1080px) {
+  main .main2-section .Explore-all-destination-btn button {
+    display: none;
+  }
 }
 main .main2-section .Explore-all-destination-btn button:hover {
   background-color: red;
@@ -246,7 +292,13 @@ main .main3-section {
   justify-content: space-between;
   align-items: center;
 }
-main .main3-section .right-3section img {
+@media (min-width: 1080px) {
+  main .main3-section {
+    display: grid;
+    grid-template-areas: "left-3section, right-3section" "left-3section, right-3section";
+  }
+}
+main .main3-section .left-3section img {
   margin: 2rem 0 auto;
   width: 100%;
   height: auto;
@@ -254,40 +306,40 @@ main .main3-section .right-3section img {
      object-fit: cover;
   border-radius: 2rem;
 }
-main .main3-section .right-3section h3 {
+main .main3-section .left-3section h3 {
   font-size: 2rem;
   margin: 0.5rem 0;
 }
-main .main3-section .right-3section .location {
+main .main3-section .left-3section .location {
   margin-top: 0.5rem;
   color: rgb(106, 106, 106);
 }
-main .main3-section .right-3section p {
+main .main3-section .left-3section p {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-main .main3-section .left-3section {
+main .main3-section .right-3section {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-main .main3-section .left-3section .stories {
+main .main3-section .right-3section .stories {
   display: flex;
   align-items: center;
 }
-main .main3-section .left-3section .stories .place p {
+main .main3-section .right-3section .stories .place p {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-main .main3-section .left-3section .stories .place h3 {
+main .main3-section .right-3section .stories .place h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-main .main3-section .left-3section .stories .place .location {
+main .main3-section .right-3section .stories .place .location {
   color: rgb(106, 106, 106);
 }
-main .main3-section .left-3section .stories img {
+main .main3-section .right-3section .stories img {
   width: 40%;
   aspect-ratio: 1/1;
   margin-right: 2rem;
@@ -304,16 +356,41 @@ main .main4-section h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
+@media (min-width: 1080px) {
+  main .main4-section .main4-content {
+    display: flex;
+    gap: 2rem;
+  }
+}
 main .main4-section .left4-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+main .main4-section .left4-section .traveller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1080px) {
+  main .main4-section .left4-section .traveller {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 main .main4-section .left4-section .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1080px) {
+  main .main4-section .left4-section .profile {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    align-items: center;
+  }
 }
 main .main4-section .left4-section .profile img {
   width: 50%;
@@ -322,6 +399,11 @@ main .main4-section .left4-section .profile img {
      object-fit: cover;
   border-radius: 50%;
   align-items: center;
+}
+@media (min-width: 1080px) {
+  main .main4-section .left4-section .profile img {
+    width: 10%;
+  }
 }
 main .main4-section .left4-section .profile h3 {
   font-size: 2.5rem;
@@ -388,6 +470,7 @@ main .main4-section .right4-section video {
   border-radius: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 1rem;
 }
 main .main-foot {
   margin: 2rem 0;
