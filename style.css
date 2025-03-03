@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 2rem;
 }
 main #navbar {
   display: flex;
@@ -55,21 +55,32 @@ main #main1-section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  left: 0;
   background-image: url(pngkey.com-mapamundi-png-2740178.png);
   background-size: cover;
-  background-position: right right;
+  background-position: right;
+}
+@media (min-width: 1080px) {
+  main #main1-section {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 main #main1-section .left-main-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  background: transparent;
 }
 main #main1-section .left-main-div h2 {
+  background-color: transparent;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 main #main1-section .left-main-div p {
+  background-color: transparent;
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -81,29 +92,30 @@ main #main1-section .right-main-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 main #main1-section .right-main-div .right-main-image-div {
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  background-position: center;
-  gap: 1rem;
   display: grid;
+  width: 100%;
+  gap: 1rem;
   grid-template-areas: "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img2 img2" "img1 img1 img3 img3" "img1 img1 img3 img3";
 }
 main #main1-section .right-main-div .right-main-image-div .rim1 {
   grid-area: img1;
-  width: 11rem;
-  aspect-ratio: 9/16.6;
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 9/16;
 }
 main #main1-section .right-main-div .right-main-image-div .rim2 {
   grid-area: img2;
-  width: 11rem;
+  width: 100%;
+  border-radius: 10px;
   aspect-ratio: 1/1;
 }
 main #main1-section .right-main-div .right-main-image-div .rim3 {
   grid-area: img3;
-  width: 11rem;
+  width: 100%;
+  border-radius: 10px;
   aspect-ratio: 4/3;
 }
 main #main1-section .right-main-div button {
@@ -113,6 +125,11 @@ main #main1-section .right-main-div button {
   border: none;
   border-radius: 20px;
   padding: 1rem 2rem;
+}
+main #main1-section .right-main-div button:hover {
+  background-color: red;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 main .main2-section {
   margin-top: 2rem;
@@ -126,7 +143,6 @@ main .main2-section .scroll {
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
-  height: 40%;
   width: 100%;
 }
 main .main2-section .scroll-section {
@@ -156,5 +172,228 @@ main .main2-section .scroll-section .destination img:hover {
 }
 main .main2-section .scroll-section .destination h3 {
   font-size: 1.2rem;
-  z-index: 5;
+}
+main .main2-section .Explore-all-destination-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+main .main2-section .Explore-all-destination-btn button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .main2-section .Explore-all-destination-btn button:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+main .main3-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main3-section .right-3section img {
+  margin: 2rem 0 auto;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2rem;
+}
+main .main3-section .right-3section h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+main .main3-section .right-3section .location {
+  margin-top: 0.5rem;
+  color: rgb(106, 106, 106);
+}
+main .main3-section .right-3section p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+main .main3-section .left-3section {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .main3-section .left-3section .stories {
+  display: flex;
+  align-items: center;
+}
+main .main3-section .left-3section .stories .place p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+main .main3-section .left-3section .stories .place h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+main .main3-section .left-3section .stories .place .location {
+  color: rgb(106, 106, 106);
+}
+main .main3-section .left-3section .stories img {
+  width: 40%;
+  aspect-ratio: 1/1;
+  margin-right: 2rem;
+  border-radius: 2rem;
+}
+main .main4-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+main .main4-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+main .main4-section .left4-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main .main4-section .left4-section .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main4-section .left4-section .profile img {
+  width: 50%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  align-items: center;
+}
+main .main4-section .left4-section .profile h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+main .main4-section .left4-section .profile p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+main .main4-section .left4-section .profile .location {
+  color: rgb(106, 106, 106);
+  margin-bottom: 0.5rem;
+}
+main .main4-section .left4-section .profile i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+main .main4-section .left4-section .text h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+main .main4-section .left4-section .text p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+main .main4-section .right4-section {
+  display: flex;
+  gap: 6%;
+}
+main .main4-section .right4-section img {
+  width: 47%;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2rem;
+}
+main .main4-section .right4-section .vidtext {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .main4-section .right4-section .vidtext h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+main .main4-section .right4-section .vidtext button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .main4-section .right4-section .vidtext button:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+main .main4-section .right4-section video {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main-foot {
+  margin: 2rem 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  gap: 4rem;
+  background-color: rgb(106, 106, 106);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .main-foot h2 {
+  font-size: 2rem;
+  width: 70vw;
+  text-align: center;
+  background-color: rgb(106, 106, 106);
+}
+main .main-foot .search {
+  background-color: rgb(106, 106, 106);
+}
+main .main-foot .search button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .main-foot .search button:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+main .main-foot .search input {
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+main .main-foot p {
+  color: white;
+  font-size: 1rem;
+  background-color: rgb(106, 106, 106);
+}
+main .main-foot p a {
+  background-color: rgb(106, 106, 106);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+main .main-foot p a:hover {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
