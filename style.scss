@@ -357,6 +357,8 @@ main {
         .scroll-section {
 
             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             width: 100%;
             padding: 10px;
             gap: 10px;
@@ -385,6 +387,17 @@ main {
                     font-size: 1.2rem;
                     z-index: 5;
                 }
+            }
+        }
+        
+        .Explore-all-destination-btn {
+            button{
+                background-color: black;
+                color: white;
+                margin-top: 2rem;
+                border: none;
+                border-radius: 20px;
+                padding: 1rem 2rem;
             }
         }
 
