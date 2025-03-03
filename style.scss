@@ -63,10 +63,10 @@ main {
         @media (min-width: 1080px){
             flex-direction: row;
             gap: 2rem;
-            
         }
 
-        margin-top: 2rem;
+        // margin-top: 2rem;
+        margin: 2rem 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -78,14 +78,27 @@ main {
         background-position: right;
 
         .left-main-div {
+
+            
+
             margin-left: 2rem;
             display: flex;
             flex-direction: column;
+            // justify-content: center;
             align-items: center;
             margin-top: 2rem;
             background: transparent;
 
             h2 {
+
+                @media (min-width:1080px) {
+                    font-size: 4rem;
+                    span{
+                        color: red;
+                        background-color: transparent;
+                    }
+                }
+
                 background-color: transparent;
                 font-size: 2rem;
                 margin-bottom: 2rem;
@@ -100,6 +113,21 @@ main {
             .left-main-div-button {
                 display: none;
                 background-color: red;
+                @media (min-width:1080px){
+                    display: block;
+                    background-color: black;
+                color: white;
+                margin-top: 2rem;
+                border: none;
+                border-radius: 20px;
+                padding: 1rem 2rem;
+
+                &:hover {
+                    background-color: red;
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+                }
             }
         }
 
@@ -113,6 +141,19 @@ main {
                 display: grid;
                 width: 100%;
                 gap: 1rem;
+
+                @media (min-width:1080px){
+                    grid-template-areas: 
+                    ". . img2 img2"
+                    "img1 img1 img2 img2"
+                    "img1 img1 img2 img2"
+                    "img1 img1 img2 img2"
+                    "img1 img1 img3 img3"
+                    ". . img3 img3"
+                    ;
+
+                }
+
                 grid-template-areas:
                     "img1 img1 img2 img2"
                     "img1 img1 img2 img2"
@@ -133,6 +174,9 @@ main {
                     width: 100%;
                     border-radius: 10px;
                     aspect-ratio: 1/1;
+                    @media (min-width:1080px) {
+                        aspect-ratio: 3/4;
+                    }
                 }
 
                 .rim3 {
@@ -140,6 +184,12 @@ main {
                     width: 100%;
                     border-radius: 10px;
                     aspect-ratio: 4/3;
+
+                    @media (min-width:1080px) {
+                        aspect-ratio: 1/1;
+                        margin-top: -8rem;
+                    }
+
                 }
             }
 
@@ -156,6 +206,11 @@ main {
                     transform: scale(1.1);
                     transition: 0.3s ease-in-out;
                 }
+
+                @media (min-width:1080px) {
+                    display: none;
+                }
+
             }
         }
     
